@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio – Romain Chevrot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Réalisations de Romain Chevrot – PoC APISIX, PoC Vault / Kong, Kong Portal, migration OpenShift 3 vers 4.">
+  <meta name="author" content="Romain Chevrot">
+
+  <meta property="og:title" content="Portfolio – Romain Chevrot">
+  <meta property="og:description" content="PoC APISIX, PoC Vault / Kong, Kong Portal, migration OpenShift 3 → 4.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romain.chevrot.ovh/portfolio.html">
+  <meta property="og:image" content="https://romain.chevrot.ovh/preview.png">
+
+  <meta name="theme-color" content="#000000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <g fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'>
+      <path d='M20 45 L50 20 L80 45'/>
+      <rect x='30' y='45' width='40' height='35' rx='4'/>
+    </g>
+  </svg>">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+
+  <header class="nav">
+    <a href="index.html" class="nav-brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="22" height="22" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 45 L50 20 L80 45"/><rect x="30" y="45" width="40" height="35" rx="4"/>
+      </svg>
+      <span>Romain Chevrot</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="infra.html">Infra</a>
+      <a href="https://www.linkedin.com/in/r-chvrt/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </nav>
+  </header>
+
+  <main class="portfolio">
+
+    <section class="hero">
+      <p class="eyebrow">// portfolio</p>
+      <h1>Réalisations</h1>
+      <p class="subtitle">
+        Quelques projets menés en mission : API Gateway, sécurité des secrets et plateformes Kubernetes / OpenShift.
+      </p>
+    </section>
+
+    <div class="filters" aria-label="Filtrer les réalisations">
+      <button class="filter active" data-filter="all">Tous</button>
+      <button class="filter" data-filter="api-gateway">API Gateway</button>
+      <button class="filter" data-filter="securite">Sécurité</button>
+      <button class="filter" data-filter="cicd">CI/CD</button>
+      <button class="filter" data-filter="openshift">OpenShift</button>
+    </div>
+
+    <section class="projects">
+
+      <!-- ===== PoC APISIX ===== -->
+      <article class="project" data-tags="api-gateway">
+        <div class="project-head">
+          <span class="project-kind">PoC</span>
+          <span class="project-domain">API Gateway</span>
+        </div>
+        <h2>PoC Apache APISIX</h2>
+        <p class="project-lead">Évaluation d'APISIX comme API Gateway cloud-native.</p>
+
+        <div class="project-body">
+          <div class="project-block">
+            <h3>Contexte</h3>
+            <p>Trouver une gateway performante, pilotable en GitOps et native Kubernetes.</p>
+          </div>
+          <div class="project-block">
+            <h3>Réalisé</h3>
+            <ul>
+              <li>Déploiement sur Kubernetes (Helm, etcd) avec l'Ingress Controller</li>
+              <li>Routes déclarées en CRDs</li>
+              <li>Tests des plugins : auth (JWT, OIDC), rate limiting, observabilité</li>
+              <li>Benchmark et comparatif avec l'existant</li>
+            </ul>
+          </div>
+          <div class="project-block result">
+            <h3>Résultat</h3>
+            <p>Grille de décision et environnement de démo reproductible.</p>
+          </div>
+        </div>
+
+        <ul class="stack">
+          <li>APISIX</li><li>Kubernetes</li><li>Helm</li><li>etcd</li><li>OIDC</li><li>Prometheus</li>
+        </ul>
+      </article>
+
+      <!-- ===== PoC Vault / Kong ===== -->
+      <article class="project" data-tags="api-gateway securite">
+        <div class="project-head">
+          <span class="project-kind">PoC</span>
+          <span class="project-domain">API Gateway · Sécurité</span>
+        </div>
+        <h2>PoC HashiCorp Vault × Kong</h2>
+        <p class="project-lead">Centralisation des secrets de Kong dans HashiCorp Vault.</p>
+
+        <div class="project-body">
+          <div class="project-block">
+            <h3>Contexte</h3>
+            <p>Des secrets stockés en clair dans la configuration de la gateway.</p>
+          </div>
+          <div class="project-block">
+            <h3>Réalisé</h3>
+            <ul>
+              <li>Déploiement de Vault et des moteurs KV et PKI</li>
+              <li>Références <code>{vault://…}</code> dans la configuration Kong</li>
+              <li>Rotation des credentials et des certificats TLS</li>
+              <li>Policies au moindre privilège et audit des accès</li>
+            </ul>
+          </div>
+          <div class="project-block result">
+            <h3>Résultat</h3>
+            <p>Plus aucun secret en clair, accès tracés.</p>
+          </div>
+        </div>
+
+        <ul class="stack">
+          <li>Kong</li><li>HashiCorp Vault</li><li>PKI / TLS</li><li>Kubernetes</li>
+        </ul>
+      </article>
+
+      <!-- ===== Kong Portal (résumé de conf) ===== -->
+      <article class="project" data-tags="api-gateway cicd">
+        <div class="project-head">
+          <span class="project-kind">Outil</span>
+          <span class="project-domain">API Gateway · CI/CD</span>
+        </div>
+        <h2>Kong Portal</h2>
+        <p class="project-lead">Un résumé lisible de la configuration Kong, publié sur GitLab Pages.</p>
+
+        <div class="project-body">
+          <div class="project-block">
+            <h3>Contexte</h3>
+            <p>Rendre la configuration de la gateway consultable sans accès à Kong.</p>
+          </div>
+          <div class="project-block">
+            <h3>Réalisé</h3>
+            <ul>
+              <li>Extraction de la configuration Kong avec <code>jq</code> / <code>yq</code></li>
+              <li>Rendu en pages HTML par un script Python</li>
+              <li>Génération et publication automatiques via GitLab CI</li>
+            </ul>
+          </div>
+          <div class="project-block result">
+            <h3>Résultat</h3>
+            <p>Une documentation de la gateway à jour, sans effort manuel.</p>
+          </div>
+        </div>
+
+        <ul class="stack">
+          <li>Kong</li><li>jq</li><li>yq</li><li>Python</li><li>GitLab CI</li><li>GitLab Pages</li>
+        </ul>
+      </article>
+
+      <!-- ===== Migration OpenShift 3 -> 4 ===== -->
+      <article class="project" data-tags="openshift">
+        <div class="project-head">
+          <span class="project-kind">Migration</span>
+          <span class="project-domain">OpenShift</span>
+        </div>
+        <h2>Migration OpenShift 3 → 4</h2>
+        <p class="project-lead">Migration d'une plateforme de production OpenShift 3.11 vers OpenShift 4.</p>
+
+        <div class="project-body">
+          <div class="project-block">
+            <h3>Contexte</h3>
+            <p>Fin de support de la v3, aucune mise à jour « in place » possible.</p>
+          </div>
+          <div class="project-block">
+            <h3>Réalisé</h3>
+            <ul>
+              <li>Inventaire des applications et des objets non portables</li>
+              <li>Installation des clusters OpenShift 4</li>
+              <li>Migration des workloads par vagues (MTC)</li>
+              <li>Adaptation CI/CD, routes et supervision</li>
+            </ul>
+          </div>
+          <div class="project-block result">
+            <h3>Résultat</h3>
+            <p>Workloads migrés, clusters v3 décommissionnés.</p>
+          </div>
+        </div>
+
+        <ul class="stack">
+          <li>OpenShift 4</li><li>OpenShift 3.11</li><li>MTC</li><li>Operators</li><li>CI/CD</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section class="cta">
+      <p>Envie d'en discuter ?</p>
+      <a href="https://www.linkedin.com/in/r-chvrt/" class="button" target="_blank" rel="noopener">Me contacter sur LinkedIn</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Romain Chevrot</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+
+  <script>
+    // Année du footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Filtrage des projets
+    const filters = document.querySelectorAll('.filter');
+    const projects = document.querySelectorAll('.project');
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        projects.forEach(p => {
+          const match = f === 'all' || p.dataset.tags.split(' ').includes(f);
+          p.classList.toggle('hidden', !match);
+        });
+      });
+    });
+
+    // Apparition au scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    projects.forEach(p => io.observe(p));
+  </script>
+</body>
+</html>

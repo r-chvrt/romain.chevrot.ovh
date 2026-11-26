@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Infra – Romain Chevrot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="L'infra de Romain Chevrot : 30 agents IA organisés en équipes, 8 modèles, 2 serveurs dédiés auto-hébergés et 5 noms de domaine.">
+  <meta name="author" content="Romain Chevrot">
+
+  <meta property="og:title" content="Infra – Romain Chevrot">
+  <meta property="og:description" content="IA : 30 agents, 8 modèles. OPS : 2 serveurs dédiés, 5 domaines, tout en auto-hébergé.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romain.chevrot.ovh/infra.html">
+  <meta property="og:image" content="https://romain.chevrot.ovh/preview.png">
+
+  <meta name="theme-color" content="#000000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <g fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'>
+      <path d='M20 45 L50 20 L80 45'/>
+      <rect x='30' y='45' width='40' height='35' rx='4'/>
+    </g>
+  </svg>">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+
+  <header class="nav">
+    <a href="index.html" class="nav-brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="22" height="22" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 45 L50 20 L80 45"/><rect x="30" y="45" width="40" height="35" rx="4"/>
+      </svg>
+      <span>Romain Chevrot</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="infra.html" class="active">Infra</a>
+      <a href="https://www.linkedin.com/in/r-chvrt/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </nav>
+  </header>
+
+  <main class="portfolio">
+
+    <section class="hero">
+      <p class="eyebrow">// infra</p>
+      <h1>Mon infra</h1>
+      <p class="subtitle">
+        Côté IA, une équipe d'agents branchée sur plusieurs modèles. Côté OPS, les serveurs, domaines et services auto-hébergés qui font tourner le reste.
+      </p>
+    </section>
+
+    <div class="tabs-wrap">
+      <div class="tabs" role="tablist" aria-label="Parties de l'infra" data-active="ia">
+        <button class="tab" role="tab" id="tab-ia" aria-controls="panel-ia" aria-selected="true" data-panel="ia">IA</button>
+        <button class="tab" role="tab" id="tab-ops" aria-controls="panel-ops" aria-selected="false" data-panel="ops" tabindex="-1">OPS</button>
+      </div>
+    </div>
+
+    <div class="panels">
+      <div class="panels-track" data-active="ia">
+
+        <!-- =====================================================
+             PANNEAU IA
+             ===================================================== -->
+        <section class="panel" id="panel-ia" role="tabpanel" aria-labelledby="tab-ia">
+
+          <div class="stats reveal">
+            <div class="stat"><span class="stat-value" data-count="30">30</span><span class="stat-label">agents IA</span></div>
+            <div class="stat"><span class="stat-value" data-count="9">9</span><span class="stat-label">rôles</span></div>
+            <div class="stat"><span class="stat-value" data-count="8">8</span><span class="stat-label">modèles branchés</span></div>
+            <div class="stat"><span class="stat-value" data-count="1">1</span><span class="stat-label">harness</span></div>
+          </div>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">01 · architecture</p>
+              <h2>Vue d'ensemble</h2>
+            </div>
+            <div class="flow">
+              <div class="flow-node">
+                <span class="flow-kicker">modèles</span>
+                <strong>8 LLM</strong>
+                <span class="flow-sub">Claude, Gemini, GPT, DeepSeek</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node accent">
+                <span class="flow-kicker">harness</span>
+                <strong>hermes-agent</strong>
+                <span class="flow-sub">orchestration &amp; outils</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node">
+                <span class="flow-kicker">agents</span>
+                <strong>30 agents</strong>
+                <span class="flow-sub">répartis en équipes</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node">
+                <span class="flow-kicker">sortie</span>
+                <strong>Projets</strong>
+                <span class="flow-sub">code, design, docs, offres</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">02 · organisation</p>
+              <h2>Les agents</h2>
+              <p class="block-sub">Des équipes par projet, avec un agent global qui crée les autres.</p>
+            </div>
+            <div class="org">
+              <div class="org-root">
+                <span class="role-icon">◎</span>
+                <div>
+                  <strong>Agent global</strong>
+                  <p>Crée les nouveaux agents et réalise leur onboarding.</p>
+                </div>
+              </div>
+              <div class="org-link" aria-hidden="true"></div>
+              <div class="roles">
+                <div class="role"><span class="role-icon">⇄</span><strong>Orchestrateurs</strong><p>Découpent le travail et coordonnent les équipes.</p></div>
+                <div class="role"><span class="role-icon">☰</span><strong>PO</strong><p>Cadrent le besoin et priorisent.</p></div>
+                <div class="role"><span class="role-icon">▦</span><strong>Architectes</strong><p>Conçoivent et valident les choix techniques.</p></div>
+                <div class="role"><span class="role-icon">{}</span><strong>Devs backend</strong><p>APIs, services et données.</p></div>
+                <div class="role"><span class="role-icon">&lt;/&gt;</span><strong>Devs frontend</strong><p>Interfaces web.</p></div>
+                <div class="role"><span class="role-icon">◇</span><strong>Designers</strong><p>UI / UX et maquettes.</p></div>
+                <div class="role"><span class="role-icon">✓</span><strong>Reviewers</strong><p>Relecture et qualité.</p></div>
+                <div class="role"><span class="role-icon">↗</span><strong>Commerciaux</strong><p>Prospection et propositions.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">03 · modèles</p>
+              <h2>Les modèles en ce moment</h2>
+            </div>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="terminal-title">models — actifs · nov. 2026</span>
+              </div>
+              <table class="terminal-table">
+                <thead>
+                  <tr><th>modèle</th><th>accès</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>claude-opus-5-5</td><td>anthropic</td></tr>
+                  <tr><td>claude-sonnet-5-5</td><td>anthropic</td></tr>
+                  <tr><td>gpt-6.2-sol</td><td>codex</td></tr>
+                  <tr><td>gemini-pro-orchestrator-neon</td><td>antigravity</td></tr>
+                  <tr><td>gemini-4-neon</td><td>google</td></tr>
+                  <tr><td>gemini-3.8-flash</td><td>google</td></tr>
+                  <tr><td>deepseek-v4.1-flash</td><td>opencode-go</td></tr>
+                  <tr><td>deepseek-v4.1-flash</td><td>openrouter</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">04 · harness</p>
+              <h2>Le harness</h2>
+              <p class="block-sub">La couche qui relie les agents aux modèles et aux outils.</p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-col now">
+                <h3>Aujourd'hui</h3>
+                <ul>
+                  <li><strong>hermes-agent</strong><span>harness principal</span></li>
+                  <li><strong>OpenBot</strong><span>utilisé en complément</span></li>
+                </ul>
+              </div>
+              <div class="timeline-col">
+                <h3>Avant</h3>
+                <ul>
+                  <li><strong>Timon</strong></li>
+                  <li><strong>T3Code</strong></li>
+                  <li><strong>Paseo</strong></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+        </section>
+
+        <!-- =====================================================
+             PANNEAU OPS
+             ===================================================== -->
+        <section class="panel" id="panel-ops" role="tabpanel" aria-labelledby="tab-ops" inert>
+
+          <div class="stats stats-2 reveal">
+            <div class="stat"><span class="stat-value" data-count="2">2</span><span class="stat-label">serveurs dédiés</span></div>
+            <div class="stat"><span class="stat-value" data-count="5">5</span><span class="stat-label">noms de domaine</span></div>
+          </div>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">01 · topologie</p>
+              <h2>Vue d'ensemble</h2>
+            </div>
+            <div class="flow">
+              <div class="flow-node">
+                <span class="flow-kicker">dns</span>
+                <strong>5 domaines</strong>
+                <span class="flow-sub">OVHcloud · Cloudflare</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node accent">
+                <span class="flow-kicker">entrée</span>
+                <strong>Traefik</strong>
+                <span class="flow-sub">reverse proxy · TLS Let's Encrypt</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node">
+                <span class="flow-kicker">compute</span>
+                <strong>2 serveurs dédiés</strong>
+                <span class="flow-sub">maison · OVH, Debian</span>
+              </div>
+              <div class="flow-arrow" aria-hidden="true"></div>
+              <div class="flow-node">
+                <span class="flow-kicker">run</span>
+                <strong>Docker Compose</strong>
+                <span class="flow-sub">services auto-hébergés</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">02 · serveurs</p>
+              <h2>Les serveurs</h2>
+            </div>
+
+            <div class="servers">
+              <article class="server">
+                <div class="server-head">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span class="flow-kicker">homelab</span>
+                </div>
+                <h3>Serveur maison</h3>
+                <p class="server-role">Homelab principal : forge logicielle, cloud perso, médias et agents IA.</p>
+                <dl class="specs">
+                  <div><dt>cpu</dt><dd>Intel Core i5-12600K · 10c / 16t</dd></div>
+                  <div><dt>gpu</dt><dd>NVIDIA RTX 3050</dd></div>
+                  <div><dt>ram</dt><dd>32 Go</dd></div>
+                  <div><dt>disques</dt><dd>NVMe 512 Go · 2 × SSD 1 To · HDD 4 To</dd></div>
+                  <div><dt>os</dt><dd>Debian · KVM</dd></div>
+                </dl>
+                <ul class="stack">
+                  <li>GitLab</li><li>Nextcloud</li><li>Immich</li><li>Jellyfin</li><li>Plex</li><li>Kavita</li>
+                  <li>Outline</li><li>FreshRSS</li><li>RSSHub</li><li>Prometheus</li><li>Grafana</li>
+                  <li>Dependency-Track</li><li>Gotify</li><li>OpenBot</li><li>Portail perso</li><li>Jeux web maison</li>
+                </ul>
+              </article>
+
+              <div class="server-link" aria-label="Liaison VPN WireGuard entre les serveurs">
+                <span class="wire" aria-hidden="true"></span>
+                <span class="wire-label">WireGuard</span>
+                <span class="wire" aria-hidden="true"></span>
+              </div>
+
+              <article class="server">
+                <div class="server-head">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span class="flow-kicker">datacenter</span>
+                </div>
+                <h3>Serveur dédié OVH</h3>
+                <p class="server-role">Outils collaboratifs d'équipe et site vitrine.</p>
+                <dl class="specs">
+                  <div><dt>cpu</dt><dd>Intel Xeon D-1521 · 4c / 8t</dd></div>
+                  <div><dt>ram</dt><dd>32 Go</dd></div>
+                  <div><dt>disques</dt><dd>2 × SSD 480 Go · RAID 1</dd></div>
+                  <div><dt>os</dt><dd>Debian</dd></div>
+                </dl>
+                <ul class="stack">
+                  <li>Plane</li><li>Twenty</li><li>Mattermost</li><li>Nextcloud</li><li>SonarQube</li>
+                  <li>Linkwarden</li><li>authentik</li><li>GitLab Runner</li><li>Prometheus</li>
+                  <li>Outils PDF</li><li>Site vitrine</li>
+                </ul>
+              </article>
+            </div>
+
+            <p class="note">
+              Les agents OpenBot tournent sur le serveur maison.
+              <button class="link-btn" data-goto="ia">Voir l'onglet IA →</button>
+            </p>
+          </section>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">03 · domaines</p>
+              <h2>Les domaines</h2>
+            </div>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="terminal-title">domaines</span>
+              </div>
+              <table class="terminal-table">
+                <thead>
+                  <tr><th>domaine</th><th>usage</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>chevrot.ovh</td><td>Site perso &amp; portfolio · GitHub Pages</td></tr>
+                  <tr><td>romain-c.fr</td><td>Redirection vers le site perso</td></tr>
+                  <tr><td>wace.studio</td><td>Site vitrine et outils du studio</td></tr>
+                  <tr class="muted"><td>+ 2 domaines</td><td>internes, non listés</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="block reveal">
+            <div class="block-title">
+              <p class="eyebrow">04 · plateforme</p>
+              <h2>Réseau, sécurité &amp; exploitation</h2>
+            </div>
+
+            <div class="tiles-group">
+              <h3>réseau &amp; sécurité</h3>
+              <div class="tiles">
+                <div class="role"><span class="role-icon">rp</span><strong>Reverse proxy</strong><p>Traefik sur les deux serveurs.</p></div>
+                <div class="role"><span class="role-icon">tls</span><strong>Certificats</strong><p>Let's Encrypt, validation par DNS.</p></div>
+                <div class="role"><span class="role-icon">dns</span><strong>DNS</strong><p>OVHcloud et Cloudflare.</p></div>
+                <div class="role"><span class="role-icon">vpn</span><strong>VPN</strong><p>WireGuard entre les serveurs, dédié à la supervision.</p></div>
+                <div class="role"><span class="role-icon">sso</span><strong>SSO</strong><p>authentik (OVH) et Tinyauth (maison).</p></div>
+                <div class="role"><span class="role-icon">ids</span><strong>CrowdSec</strong><p>Détection des comportements malveillants.</p></div>
+              </div>
+            </div>
+
+            <div class="tiles-group">
+              <h3>exploitation</h3>
+              <div class="tiles">
+                <div class="role"><span class="role-icon">ci</span><strong>CI/CD</strong><p>GitLab CI auto-hébergé, runners sur les deux serveurs.</p></div>
+                <div class="role"><span class="role-icon">upd</span><strong>Mises à jour</strong><p>Images tenues à jour par Watchtower.</p></div>
+                <div class="role"><span class="role-icon">mon</span><strong>Supervision</strong><p>Prometheus, Grafana et sondes de disponibilité.</p></div>
+                <div class="role"><span class="role-icon">git</span><strong>Dashboards as code</strong><p>Tableaux de bord Grafana versionnés dans Git.</p></div>
+                <div class="role"><span class="role-icon">bak</span><strong>Sauvegardes</strong><p>Côté maison : Backrest (restic) et Databasus, en local et sur S3.</p></div>
+                <div class="role"><span class="role-icon">www</span><strong>Pages statiques</strong><p>Publiées via GitLab Pages auto-hébergé.</p></div>
+              </div>
+            </div>
+          </section>
+
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Romain Chevrot</span>
+    <a href="index.html">← Retour à l'accueil</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---------- Compteurs animés ----------
+    function countUp(el) {
+      const target = Number(el.dataset.count);
+      if (reduceMotion || target <= 2) { el.textContent = target; return; }
+      const start = performance.now(), duration = 900;
+      const step = now => {
+        const t = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    // ---------- Apparition au scroll ----------
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ---------- Onglets IA / OPS (panneaux horizontaux) ----------
+    const tabsEl = document.querySelector('.tabs');
+    const tabsWrap = document.querySelector('.tabs-wrap');
+    const tabs = document.querySelectorAll('.tab');
+    const track = document.querySelector('.panels-track');
+    const panelsEl = document.querySelector('.panels');
+    const panels = { ia: document.getElementById('panel-ia'), ops: document.getElementById('panel-ops') };
+    let active = 'ia';
+
+    function fitHeight() {
+      panelsEl.style.height = panels[active].offsetHeight + 'px';
+    }
+
+    function show(name, { scroll = true, focus = false } = {}) {
+      if (!panels[name]) return;
+      active = name;
+      tabsEl.dataset.active = name;
+      track.dataset.active = name;
+      tabs.forEach(t => {
+        const on = t.dataset.panel === name;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        if (on && focus) t.focus();
+      });
+      Object.entries(panels).forEach(([k, p]) => p.inert = k !== name);
+      fitHeight();
+      history.replaceState(null, '', '#' + name);
+
+      // Si on a scrollé plus bas que les onglets, on remonte au début du panneau
+      if (scroll) {
+        const top = tabsWrap.getBoundingClientRect().top + window.scrollY - 70;
+        if (window.scrollY > top) window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    }
+
+    tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.panel)));
+    document.querySelectorAll('[data-goto]').forEach(b => b.addEventListener('click', () => show(b.dataset.goto)));
+
+    // Navigation clavier entre onglets (flèches gauche / droite)
+    tabsEl.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      show(active === 'ia' ? 'ops' : 'ia', { focus: true });
+    });
+
+    new ResizeObserver(fitHeight).observe(panels.ia);
+    new ResizeObserver(fitHeight).observe(panels.ops);
+
+    // #ops (et l'ancien #global) ouvrent directement le panneau OPS
+    show(['#ops', '#global'].includes(location.hash) ? 'ops' : 'ia', { scroll: false });
+  </script>
+</body>
+</html>
